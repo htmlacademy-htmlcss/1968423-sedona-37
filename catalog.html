@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
@@ -25,7 +26,7 @@
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-current" href="#">
+            <a class="navigation-link" href="catalog.html">
               Гостиницы
             </a>
           </li>
@@ -34,7 +35,7 @@
 
       <ul class="user-list">
         <li class="user-item">
-          <a class="user-search" href="#">
+          <a class="user-search" href="catalog.html">
             <span class="visually-hidden">
               Поиск
             </span>
@@ -53,12 +54,15 @@
           </a>
         </li>
       </ul>
+
     </header>
 
 
     <!--Основное содержимое страницы-->
     <main class="main-inner">
       <section class="options-filter">
+
+      <div class="options-header">
         <h1 class="options-title">
           Гостиницы Седоны
         </h1>
@@ -73,11 +77,13 @@
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html">
               <span>
-                Гостиницы
+                Гостиницы<p></p>
               </span>
             </a>
           </li>
         </ul>
+      </div>
+
         <div class="control-filter">
           <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
 
@@ -140,8 +146,8 @@
             </fieldset>
 
             <div class="control-buttons">
-              <button class="button" type="submit">Применить</button>
-              <button class="button" type="reset">Сбросить</button>
+              <button class="button button-blue" type="submit">Применить</button>
+              <button class="button button-none" type="reset">Сбросить</button>
             </div>
 
           </form>
@@ -186,11 +192,9 @@
               </a>
             </li>
           </ul>
-
         </div>
 
         <ul class="hotel-card-list">
-
           <li class="hotel-card-item">
             <div class="card-img">
               <a class="card-link" href="#">
@@ -212,7 +216,7 @@
               <a class="card-content-link" href="#">
                 подробнее
               </a>
-              <a class="card-content-link" href="#">
+              <a class="card-content-link link-blue" href="#">
                 в избранное
               </a>
               <p class="stars star-4">
@@ -245,10 +249,10 @@
               <a class="card-content-link" href="#">
                 подробнее
               </a>
-              <a class="card-content-link" href="#">
+              <a class="card-content-link link-green" href="#">
                 в избранном
               </a>
-              <p class="stars star-5">
+              <p class="stars star-4">
                 <span class="visually-hidden">4 звезды</span>
               </p>
               <p class="card-content-rating" aria-label="Рейтинг: 9,2">
@@ -278,7 +282,7 @@
               <a class="card-content-link" href="#">
                 подробнее
               </a>
-              <a class="card-content-link" href="#">
+              <a class="card-content-link link-blue" href="#">
                 в избранное
               </a>
               <p class="stars star-3">
@@ -311,7 +315,7 @@
               <a class="card-content-link" href="#">
                 подробнее
               </a>
-              <a class="card-content-link" href="#">
+              <a class="card-content-link link-blue" href="#">
                 в избранное
               </a>
               <p class="stars star-2">
@@ -338,25 +342,25 @@
             <a class="pagination-link" href="#">4</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link" href="#">. . .</a>
+            <a class="pagination-link pagination-none" href="#">. . .</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link" href="#">10</a>
+            <a class="pagination-link pagination-ten" href="#">10</a>
           </li>
         </ul>
       </section>
 
-      <section class="subscribe">
-        <h2 class="title white">
+      <section class="subscribe subscribe-white">
+        <h2 class="title title-white">
           Подпишитесь на рассылку
         </h2>
-        <p class="page-text white">
+        <p class="page-text page-text-white">
           Только полезная информация и никакого спама, честное бойскаутское!
         </p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="subscribe-email">Email</label>
           <input class="subscribe-field" type="email" id="subscribe-email" placeholder="Ваш e-mail" required>
-          <button class="subscribe-button" type="submit">Подписаться</button>
+          <button class="button subscribe-button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
