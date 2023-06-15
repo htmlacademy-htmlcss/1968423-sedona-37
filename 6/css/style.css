@@ -1,0 +1,550 @@
+* {
+box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  min-width: 1280px;
+  margin: 0;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  background-color: #F2F2F2;
+  color: #333333;
+}
+
+.wrapper {
+  margin: 0 auto;
+  min-height: 100%;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.page-main {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.main-inner {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.page-header {
+}
+.header-navigation {
+}
+.logo {
+}
+.navigation-list {
+  list-style: none;
+}
+.navigation-item {
+}
+.navigation-link {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+.user-list {
+  list-style: none;
+}
+.user-item {
+}
+.user-search {
+}
+.visually-hidden {
+}
+.user-favorites {
+}
+.user-basket {
+  display: block;       /*Как будем проходить flex, ширину и display block уберу*/
+  padding: 8px 34px;
+  width: 160px;         /*Как будем проходить flex, ширину и display block уберу*/
+  text-decoration: none;
+  background-color: #756157;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.visually-hidden {
+}
+.hero {
+}
+.hero-box {
+
+  padding: 51px 371px 82px 371px;
+  position: relative;
+  background-color: #9AA4B9;
+  background-image: url("../img/photo/index_background.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-size: cover;
+
+
+
+}
+
+.hero-box::before {
+  content: "";
+  width: 100%;
+  height: 57px;
+  background-image: url("../img/vector.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+}
+
+.hero-content {
+}
+.title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 620px;
+  color: #000000;
+
+}
+.page-text {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+
+.advantages {
+}
+.visually-hidden {
+}
+.list-advantages {
+  list-style: none;
+}
+.item-advantages {
+}
+.box-city-content {
+}
+.box-subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+.box-text {
+  text-align: center;
+  width: 230px;
+}
+.box-city-img {
+}
+
+.box-blue {
+  background-color: #82B3D3;
+}
+
+.box-blue .box-subtitle {
+  color: #FFFFFF;
+}
+
+.box-blue .box-text {
+  color: #FFFFFF;
+}
+
+.box-second-1 {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.box-second-2 {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.local {
+}
+.come {
+}
+.title {
+}
+.page-text {
+}
+.local-list {
+  list-style: none;
+}
+.box-content {
+}
+.box-second-1 {
+}
+.box-subtitle {
+}
+.box-text {
+}
+
+.hotel-search .page-text {
+  width: 592px;
+  text-align: center;
+}
+
+.hotel-search {
+}
+.title {
+}
+.page-text {
+}
+.button {
+  text-decoration: none;
+  background-color: #756157;
+  border-radius: 4px;
+  font-family: "PT Sans";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.search-button {
+  display: block;       /*Как будем проходить flex, ширину и display block уберу*/
+  padding: 8px 50px;
+  width: 376px;         /*Как будем проходить flex, ширину и display block уберу*/
+}
+
+.subscribe {
+  padding: 96px 258px 104px 258px;
+  background-color: #9AA4B9;
+  background-image: url("../img/photo/subscribe.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-size: cover;
+  color: #FFFFFF;
+}
+.subscribe .title {
+  color: #FFFFFF;
+}
+.white {
+}
+.subscribe .page-text {
+  text-align: center;
+  width: 475px;
+}
+.subscribe-form {
+}
+.visually-hidden {
+}
+.subscribe-field {
+  padding: 14px 20px;
+  background-color: #F2F2F2;
+  border-radius: 4px 0px 0px 4px;
+}
+
+.subscribe-field::placeholder {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  opacity: 0.6;
+}
+
+.subscribe-button {
+  background-color: #82B3D3;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.page-footer {
+}
+.visually-hidden {
+}
+.social-list {
+  list-style: none;
+}
+.social-item {
+}
+.social-link {
+}
+.phone-link {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+.copyright-content {
+}
+.copyright-link {
+}
+
+
+
+
+/*каталог*/
+
+.catalog-container {
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.options-filter {
+  padding: 96px 258px 104px 258px;
+  background-color: #6C8FB5;
+  background-image: url("../img/photo/filter_image.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-size: auto auto;
+  color: #FFFFFF;
+}
+.options-title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+}
+.breadcrumbs {
+  list-style: none;
+}
+.breadcrumbs-item {
+}
+.breadcrumbs-link {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+.visually-hidden {
+}
+.control-filter {
+
+}
+.filter-form {
+  display: flex;
+}
+.control-filter-group {
+}
+.control-filter-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+.filter-list {
+  list-style: none;
+}
+.filter-item {
+}
+.control {
+}
+.control-input {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+}
+.control-buttons {
+}
+.button {
+}
+.button-blue {
+  background-color: #82B3D3;
+}
+
+.button-none {
+  background: none;
+  border: none;
+}
+
+.sorting {
+}
+.title {
+}
+.sorting-select {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+}
+.visual-list {
+  list-style: none;
+}
+.visual-item {
+}
+.visual-link {
+}
+.visually-hidden {
+}
+
+.hotel-card-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 15px;
+  row-gap: 20px;
+
+
+}
+.hotel-card-item {
+  padding: 20px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  flex: 0 1 30%;
+}
+
+.card-img {
+}
+.card-link {
+  text-decoration: none;
+  color: #000000;
+}
+.card-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+
+}
+.card-content {
+}
+.card-content-text {
+}
+
+.card-content-link {
+  padding: 8px 26px;
+  text-decoration: none;
+  background-color: #756157;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.link-blue {
+  padding: 8px 20px;
+  background-color: #82B3D3;
+}
+
+
+.link-green {
+  padding: 8px 18px;
+  background-color: #7DB54F;
+
+}
+.stars {
+}
+.star-4 {
+}
+.visually-hidden {
+}
+.card-content-rating {
+  display: inline-block;
+  padding: 9px 22px 8px 23px;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+}
+.star-4 {
+}
+.star-3 {
+}
+.star-2 {
+}
+
+.pagination {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  column-gap: 8px;
+  list-style: none;
+}
+.pagination-item {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+
+
+  /* флекс задавать элементу или ссылке??? */
+}
+
+.pagination-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  text-decoration: none;
+  width: 60px;
+  height: 60px;
+  background-color: #82B3D3;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.pagination-none {
+  background: none;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: #000000;
+}
+
+.pagination-current {
+  background-color: #F2F2F2;
+  color: #000000;
+
+}
+
+.subscribe-white {
+  background-color: #FFFFFF;
+  background-image: none;
+}
+
+.subscribe-white .title-white {
+  color: #000000;
+}
+.page-text-white {
+  color: #333333;
+}
