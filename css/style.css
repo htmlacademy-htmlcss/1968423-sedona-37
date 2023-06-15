@@ -19,14 +19,35 @@ box-sizing: border-box;
 }
 
 body {
-  width: 1200px;
-  margin: 0 auto;
+  min-width: 1280px;
+  margin: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+  background-color: #F2F2F2;
   color: #333333;
+}
+
+.wrapper {
+  margin: 0 auto;
+  min-height: 100%;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.page-main {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.main-inner {
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 .page-header {
@@ -64,7 +85,7 @@ body {
   padding: 8px 34px;
   width: 160px;         /*Как будем проходить flex, ширину и display block уберу*/
   text-decoration: none;
-  background: #756157;
+  background-color: #756157;
   border-radius: 4px;
   font-weight: 700;
   font-size: 16px;
@@ -81,14 +102,22 @@ body {
 
   padding: 51px 371px 82px 371px;
   position: relative;
-  background: #9AA4B9 url("../img/photo/index_background.jpg") 0 bottom no-repeat;
+  background-color: #9AA4B9;
+  background-image: url("../img/photo/index_background.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-size: cover;
+
+
+
 }
 
 .hero-box::before {
   content: "";
   width: 100%;
   height: 57px;
-  background: url("../img/vector.svg") no-repeat;
+  background-image: url("../img/vector.svg");
+  background-repeat: no-repeat;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -141,7 +170,7 @@ body {
 }
 
 .box-blue {
-  background: #82B3D3;
+  background-color: #82B3D3;
 }
 
 .box-blue .box-subtitle {
@@ -153,11 +182,11 @@ body {
 }
 
 .box-second-1 {
-  background: rgba(131, 179, 211, 0.12);
+  background-color: rgba(131, 179, 211, 0.12);
 }
 
 .box-second-2 {
-  background: rgba(131, 179, 211, 0.2);
+  background-color: rgba(131, 179, 211, 0.2);
 }
 
 .local {
@@ -193,7 +222,7 @@ body {
 }
 .button {
   text-decoration: none;
-  background: #756157;
+  background-color: #756157;
   border-radius: 4px;
   font-family: "PT Sans";
   font-weight: 700;
@@ -211,7 +240,11 @@ body {
 
 .subscribe {
   padding: 96px 258px 104px 258px;
-  background: #9AA4B9 url("../img/photo/subscribe.jpg") 0 bottom no-repeat;
+  background-color: #9AA4B9;
+  background-image: url("../img/photo/subscribe.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-size: cover;
   color: #FFFFFF;
 }
 .subscribe .title {
@@ -229,7 +262,7 @@ body {
 }
 .subscribe-field {
   padding: 14px 20px;
-  background: #F2F2F2;
+  background-color: #F2F2F2;
   border-radius: 4px 0px 0px 4px;
 }
 
@@ -242,7 +275,7 @@ body {
 }
 
 .subscribe-button {
-  background: #82B3D3;
+  background-color: #82B3D3;
   border-radius: 0px 4px 4px 0px;
 }
 
@@ -276,9 +309,18 @@ body {
 
 /*каталог*/
 
+.catalog-container {
+  width: 1060px;
+  margin: 0 auto;
+}
+
 .options-filter {
   padding: 96px 258px 104px 258px;
-  background: #6C8FB5 url("../img/photo/filter_image.jpg") 0 bottom no-repeat;
+  background-color: #6C8FB5;
+  background-image: url("../img/photo/filter_image.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-size: auto auto;
   color: #FFFFFF;
 }
 .options-title {
@@ -301,8 +343,10 @@ body {
 .visually-hidden {
 }
 .control-filter {
+
 }
 .filter-form {
+  display: flex;
 }
 .control-filter-group {
 }
@@ -329,7 +373,7 @@ body {
 .button {
 }
 .button-blue {
-  background: #82B3D3;
+  background-color: #82B3D3;
 }
 
 .button-none {
@@ -360,10 +404,23 @@ body {
 }
 
 .hotel-card-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 15px;
+  row-gap: 20px;
+
+
 }
 .hotel-card-item {
+  padding: 20px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  flex: 0 1 30%;
 }
+
 .card-img {
 }
 .card-link {
@@ -384,7 +441,7 @@ body {
 .card-content-link {
   padding: 8px 26px;
   text-decoration: none;
-  background: #756157;
+  background-color: #756157;
   border-radius: 4px;
   font-weight: 700;
   font-size: 16px;
@@ -396,13 +453,13 @@ body {
 
 .link-blue {
   padding: 8px 20px;
-  background: #82B3D3;
+  background-color: #82B3D3;
 }
 
 
 .link-green {
   padding: 8px 18px;
-  background: #7DB54F;
+  background-color: #7DB54F;
 
 }
 .stars {
@@ -414,7 +471,7 @@ body {
 .card-content-rating {
   display: inline-block;
   padding: 9px 22px 8px 23px;
-  background: #F2F2F2;
+  background-color: #F2F2F2;
   border-radius: 4px;
   font-weight: 400;
   font-size: 16px;
@@ -431,17 +488,30 @@ body {
 }
 
 .pagination {
-}
-.pagination-item {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  column-gap: 8px;
   list-style: none;
 }
+.pagination-item {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+
+
+  /* флекс задавать элементу или ссылке??? */
+}
+
 .pagination-link {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
   text-decoration: none;
   width: 60px;
   height: 60px;
-  padding: 11px 24px 12px 23px;
-  background: #82B3D3;
+  background-color: #82B3D3;
   border-radius: 4px;
   font-weight: 700;
   font-size: 20px;
@@ -453,7 +523,6 @@ body {
 }
 
 .pagination-none {
-  padding: 16px 21px 17px 21px;
   background: none;
   font-weight: 400;
   font-size: 22px;
@@ -462,19 +531,15 @@ body {
   color: #000000;
 }
 
-.pagination-ten {
-  padding: 16px 18px 12px 18px;
-}
-
 .pagination-current {
-  background: #F2F2F2;
+  background-color: #F2F2F2;
   color: #000000;
 
 }
 
 .subscribe-white {
-  background: #FFFFFF;
-
+  background-color: #FFFFFF;
+  background-image: none;
 }
 
 .subscribe-white .title-white {
