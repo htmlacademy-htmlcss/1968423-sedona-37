@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after {
 box-sizing: border-box;
 }
 
@@ -409,7 +409,7 @@ body {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 15px;
+  column-gap: 20px;
   row-gap: 20px;
 
 
@@ -418,7 +418,7 @@ body {
   padding: 20px;
   border: 1px solid #E6E6E6;
   border-radius: 4px;
-  flex: 0 1 30%;
+  width: calc((100% - 40px) / 3);
 }
 
 .card-img {
@@ -464,8 +464,7 @@ body {
 }
 .stars {
 }
-.star-4 {
-}
+
 .visually-hidden {
 }
 .card-content-rating {
