@@ -41,6 +41,7 @@ body {
 }
 
 .page-main {
+  margin-top: -6px;
   flex-grow: 1;
   flex-shrink: 1;
 }
@@ -60,6 +61,8 @@ body {
   column-gap: 30px;
 }
 .logo {
+  position: relative;
+  z-index: 1;
 }
 .navigation-list {
   margin: 0;
@@ -144,6 +147,7 @@ body {
   color: #FFFFFF;
 }
 .hero {
+
 }
 .hero-box {
   padding: 51px 371px 82px 371px;
@@ -170,6 +174,7 @@ body {
 .hero-content {
   text-align: center;
 }
+
 .title {
   margin: 0 auto;
   font-weight: 700;
@@ -179,12 +184,25 @@ body {
   text-align: center;
   width: 620px;
   color: #000000;
-
 }
+
+.hero-content-title {
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 69px;
+  margin-bottom: 25px;
+}
+
 .page-text {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
+}
+
+.hero-content-text {
+  margin: 0;
+  margin-bottom: 69px;
+  padding: 0;
 }
 
 
@@ -228,6 +246,10 @@ body {
 
 }
 .box-subtitle {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 62px;
+  width: 175px;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -235,12 +257,26 @@ body {
   text-transform: uppercase;
   color: #000000;
 }
+
+.subtitle-indent {
+  margin-top: 113px;
+  margin-bottom: 62px;
+  width: 175px;
+}
+
 .box-text {
   margin: 0;
   padding: 0;
   text-align: center;
   width: 230px;
 }
+
+.advantages-text-indent {
+  margin-bottom: 112px;
+  width: 230px;
+
+}
+
 .box-city-img {
 }
 
@@ -256,11 +292,11 @@ body {
   color: #FFFFFF;
 }
 
-.box-second-1 {
+.box-color-1 {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.box-second-2 {
+.box-color-2 {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
@@ -268,16 +304,29 @@ body {
 }
 .come {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.title {
+.come-title {
+  margin: 0;
+  padding: 0;
+  margin-top: 64px;
+  margin-bottom: 20px;
 }
-.page-text {
+
+.come-text {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 64px;
 }
 .local-list {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
 }
 .box-item {
   flex: 0 1 33.333%;
@@ -287,12 +336,34 @@ body {
   align-items: center;
 }
 
+.local-subtitle {
+  margin: 0;
+  padding: 0;
+  margin-top: 183px;
+  margin-bottom: 30px;
+}
+
+.local-text {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 81px;
+}
+
 .box-subtitle {
 }
 .box-text {
 }
 
-.hotel-search .page-text {
+.search-title {
+  margin: 0;
+  padding: 0;
+  margin-top: 96px;
+  margin-bottom: 20px;
+}
+.search-text {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 54px;
   width: 592px;
   text-align: center;
 }
@@ -320,14 +391,12 @@ body {
 }
 
 .search-button {
-  display: block;       /*Как будем проходить flex, ширину и display block уберу*/
+  margin-bottom: 96px;
   padding: 8px 50px;
   width: 376px;         /*Как будем проходить flex, ширину и display block уберу*/
 }
 
 .subscribe {
-  padding-top: 96px;
-  padding-bottom: 104px;
   background-color: #9AA4B9;
   background-image: url("../img/photo/subscribe.jpg");
   background-repeat: no-repeat;
@@ -339,16 +408,33 @@ body {
   justify-content: center;
   align-items: center;
 }
-.subscribe .title {
+.subscribe-title {
+  margin: 0;
+  padding: 0;
+  margin-top: 96px;
+  margin-bottom: 20px;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
   color: #FFFFFF;
 }
-.white {
-}
-.subscribe .page-text {
+
+.subscribe-text {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 54px;
   text-align: center;
   width: 475px;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-size: 22px;
+  line-height: 26px;
 }
 .subscribe-form {
+  margin-bottom: 104px;
   display: flex;
 }
 .visually-hidden {
@@ -360,9 +446,12 @@ body {
   min-width: 452px;
   background-color: #F2F2F2;
   border-radius: 4px 0px 0px 4px;
+  border: none;
 }
 
 .subscribe-field::placeholder {
+  font-family: "PT Sans";
+  font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -374,6 +463,7 @@ body {
   padding: 8px 50px;
   background-color: #82B3D3;
   border-radius: 0px 4px 4px 0px;
+  border: none;
 }
 
 .page-footer {
@@ -421,15 +511,17 @@ body {
 .catalog-container {
   width: 1060px;
   margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 60px;
 }
 
 .options-filter {
-  padding: 96px 258px 104px 258px;
+  padding: 35px 70px 70px 70px;
   background-color: #6C8FB5;
   background-image: url("../img/photo/filter_image.jpg");
   background-repeat: no-repeat;
   background-position: 100% 50%;
-  background-size: auto auto;
+  background-size: cover;
   color: #FFFFFF;
 }
 .options-title {
@@ -494,12 +586,18 @@ body {
 
 .sorting {
   display: flex;
+  margin-bottom: 40px;
 }
-.title {
+.sorting-title {
+  margin: 0;
+  padding: 0;
+  margin-right: auto;
+  width: 338px;
 }
 
 .sorting-select {
   margin: 0;
+  margin-right: 70px;
   padding: 0;
   padding-top: 14px;
   padding-bottom: 14px;
@@ -514,6 +612,8 @@ body {
   border: 2px solid #E5E5E5;
   border-radius: 4px;
 }
+
+
 .visual-list {
   margin: 0;
   padding: 0;
@@ -538,6 +638,7 @@ body {
 
 .hotel-card-list {
   margin: 0;
+  margin-bottom: 40px;
   padding: 0;
   list-style: none;
   display: flex;
@@ -555,21 +656,52 @@ body {
 }
 
 .card-img {
+  margin-bottom: 16px;
+}
+
+.card-link-img img {
+  margin-bottom: 16px;
 }
 .card-link {
   text-decoration: none;
   color: #000000;
 }
 .card-title {
+  margin: 0;
+  padding: 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-
 }
 .card-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 16px;
+  column-gap: 20px;
 }
+
+
+.card-content-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-button-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-rating-box {
+  display: flex;
+  justify-content: space-between;
+}
+
 .card-content-text {
+  margin: 0;
+  padding: 0;
 }
+
 
 .card-content-link {
   padding: 8px 26px;
@@ -601,7 +733,7 @@ body {
 .visually-hidden {
 }
 .card-content-rating {
-  display: inline-block;
+  margin: 0;
   padding: 9px 22px 8px 23px;
   background-color: #F2F2F2;
   border-radius: 4px;
@@ -619,9 +751,15 @@ body {
 .star-2 {
 }
 
+.delimiter {
+  border-bottom: #E6E6E6 1px solid;
+
+}
+
 .pagination {
   margin: 0;
   padding: 0;
+  margin-top: 40px;
   display: flex;
   column-gap: 8px;
   list-style: none;
@@ -674,9 +812,9 @@ body {
   background-image: none;
 }
 
-.subscribe-white .title-white {
+.subscribe-title-color {
   color: #000000;
 }
-.page-text-white {
+.subscribe-text-color {
   color: #333333;
 }
