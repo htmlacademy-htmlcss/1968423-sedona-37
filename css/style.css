@@ -92,12 +92,14 @@ body {
 }
 .user-list {
   margin: 0;
+  padding: 0;
   align-items: center;
   list-style: none;
   display: flex;
 }
-.user-item {
 
+.user-list:last-child {
+  margin-left: 10px;                         /*Почему не работает отступ ???*/
 }
 
 .visually-hidden {
@@ -119,13 +121,11 @@ body {
 
 .user-search::before {
   content: "";
-  width: 100%;
-  height: 100%;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/icon/search.svg");
   background-repeat: no-repeat;
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  display: block;
 }
 
 .user-favorites {
@@ -133,13 +133,11 @@ body {
 }
 .user-favorites::before {
   content: "";
-  width: 100%;
-  height: 100%;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/icon/heart.svg");
   background-repeat: no-repeat;
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  display: block;
 }
 
 
@@ -334,18 +332,18 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 64px;
+  padding-bottom: 64px;
 }
 .come-title {
   margin: 0;
   padding: 0;
-  margin-top: 64px;
   margin-bottom: 20px;
 }
 
 .come-text {
   margin: 0;
   padding: 0;
-  margin-bottom: 64px;
 }
 .local-list {
   margin: 0;
@@ -395,7 +393,6 @@ body {
 .search-title {
   margin: 0;
   padding: 0;
-  margin-top: 96px;
   margin-bottom: 20px;
 }
 .search-text {
@@ -410,6 +407,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 96px;
+  padding-bottom: 96px;
 
 }
 .title {
@@ -429,12 +428,12 @@ body {
 }
 
 .search-button {
-  margin-bottom: 96px;
   padding: 8px 50px;
-  width: 376px;         /*Как будем проходить flex, ширину и display block уберу*/
 }
 
 .subscribe {
+  padding-top: 96px;
+  padding-bottom: 104px;
   background-color: #9AA4B9;
   background-image: url("../img/photo/subscribe.jpg");
   background-repeat: no-repeat;
@@ -449,7 +448,6 @@ body {
 .subscribe-title {
   margin: 0;
   padding: 0;
-  margin-top: 96px;
   margin-bottom: 20px;
   font-family: "PT Sans";
   font-style: normal;
@@ -472,7 +470,6 @@ body {
   line-height: 26px;
 }
 .subscribe-form {
-  margin-bottom: 104px;
   display: flex;
 }
 .visually-hidden {
@@ -563,6 +560,9 @@ body {
   color: #FFFFFF;
 }
 .options-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 8px;
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
@@ -581,6 +581,10 @@ body {
   line-height: 21px;
   color: #FFFFFF;
 }
+
+.options-header {
+  margin-bottom: 40px;
+}
 .visually-hidden {
 }
 .control-filter {
@@ -589,9 +593,39 @@ body {
 .filter-form {
   display: flex;
 }
-.control-filter-group {
+.control-filter-infrastructure {
+  margin: 0;
+  padding: 0;
+  width: 150px;
+  margin-right: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border: none;
 }
+
+.control-filter-type {
+  margin: 0;
+  padding: 0;
+  margin-right: auto;
+  width: 150px;
+  border: none;
+}
+
+.control-filter-price {
+  margin: 0;
+  padding: 0;
+  margin-right: 70px;
+  width: 288px;
+  border: none;
+}
+
+
 .control-filter-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 32px;
+
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -599,22 +633,32 @@ body {
 }
 .filter-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.filter-item {
+.filter-item:not(:last-child) {
+  margin-bottom: 16px;
 }
 .control {
 }
 .control-input {
-  font-weight: 400;
   font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
   line-height: 23px;
 }
 .control-buttons {
+  width: 191px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 .button {
 }
 .button-blue {
+  margin-bottom: 32px;
   background-color: #82B3D3;
+  border: none;
 }
 
 .button-none {
